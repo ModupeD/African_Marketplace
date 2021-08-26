@@ -1,10 +1,28 @@
 import "./App.css";
+
+import ReactDOM from "react-dom";
 import Form from "./components/form";
+import Home from "./components/Home";
+import {
+  Switch,
+  Route,
+  Redirect,
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Router>
+        <Switch>
+          <Route exact path="/home">
+            <Home Home={Home} />
+          </Route>
+          <Route path="/">
+            <Form Form={Form} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
