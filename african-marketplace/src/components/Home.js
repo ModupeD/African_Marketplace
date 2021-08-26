@@ -4,8 +4,8 @@ import "./Home.css";
 function Home() {
   return (
     <div>
-      <div class="source">
-        <div class="headingstyle">
+      <div className="source">
+        <div className="headingstyle">
           <header>
             <title>Site Title</title>
             <h2>African Market </h2>
@@ -25,16 +25,16 @@ function Home() {
       </div>
       <body>
         <section>
-          <div class="organize">
-            <div class="boxOne"></div>
-            <div class="boxTwo"></div>
-            <div class="boxThree"></div>
+          <div className="organize">
+            <div className="boxOne"></div>
+            <div className="boxTwo"></div>
+            <div className="boxThree"></div>
           </div>
 
-          <div class="reorganize">
-            <div class="boxFour"></div>
-            <div class="boxFive"></div>
-            <div class="boxSix"></div>
+          <div className="reorganize">
+            <div className="boxFour"></div>
+            <div className="boxFive"></div>
+            <div className="boxSix"></div>
           </div>
         </section>
       </body>
