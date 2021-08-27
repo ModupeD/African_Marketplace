@@ -1,8 +1,8 @@
-import React from "react";
-import "./Home.css";
-import pic from "./../components/Influencer.png";
+//import React from "react";
 
-function Home() {
+import pic from "./../components/Trad Wear.png";
+
+function Profile() {
   return (
     <div class="beginning">
       <div class="source">
@@ -47,10 +47,7 @@ function Home() {
               {" "}
               <h4>$9.99</h4>
             </div>
-            <div class="boxThree">
-              {" "}
-              <button>$9.99</button>
-            </div>
+            <div class="boxThree"> </div>
           </div>
 
           <div class="reorganize">
@@ -106,4 +103,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Profile;

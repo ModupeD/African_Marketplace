@@ -16,7 +16,7 @@ export default function Form() {
               <a href="/profile">Profile</a>
             </button>
             <button>
-              <a href="/">Add Items</a>
+              <a href="/">Checkout</a>
             </button>
           </nav>
         </header>

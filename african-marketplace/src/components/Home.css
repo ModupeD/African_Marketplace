@@ -146,9 +146,13 @@ h2 {
 }
 nav {
   display: flex;
-  justify-content: flex-start;
+  padding-right: 100px;
+  justify-content: flex-end;
   align-items: center;
   z-index: 999; /*will make sure everything scrolls behind the nav*/
+}
+header h2 {
+  color: purple;
 }
 .source {
   margin: 20px;
@@ -158,8 +162,12 @@ nav {
 }
 .headingstyle {
   display: flex;
+  justify-content: center;
   border: 10px;
-  background-color: #c6f4f7;
+  background-color: #fdeaff;
+}
+.headingstyle h2 {
+  text-align: center;
 }
 .organize {
   display: flex;
@@ -170,15 +178,78 @@ nav {
   flex-wrap: nowrap;
   flex-direction: row;
 }
+.column {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.allorganize {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.beginning {
+  margin: 50px;
+}
 .boxOne {
   background-image: url("Golden peach.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
+  display: block;
   width: 400px;
-  height: 250px;
+  line-height: 16px;
+  height: 450px;
   padding: 10%;
   margin: 20px;
-  display: inline-block;
+  display: block;
+}
+.boxOne h1 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008cba;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+.centered {
+  border-block-color: black;
+  margin: 20px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -2%);
+  font-size: 50px;
+  color: rgb(255, 244, 240);
+  outline: black;
+}
+.organize button {
+  line-height: 16px;
+  top: 150%;
+  position: absolute;
+}
+.reorganize button {
+  line-height: 16px;
+  top: 50%;
+}
+.body-begin img {
+  width: 1400px;
+  height: 800px;
 }
 
 .boxTwo {
@@ -186,48 +257,130 @@ nav {
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
-  height: 250px;
+  height: 450px;
   padding: 10%;
   margin: 20px;
-  display: inline-block;
+  display: block;
 }
+
 .boxThree {
   background-image: url("peach gold.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
-  height: 250px;
+  height: 450px;
   padding: 10%;
   margin: 20px;
-  display: inline-block;
+  display: block;
 }
 .boxFour {
   background-image: url("red and silver.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
-  height: 250px;
+  height: 450px;
   padding: 10%;
   margin: 20px;
-  display: inline-block;
+  display: block;
 }
 .boxFive {
   background-image: url("Black dress.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
-  height: 250px;
+  height: 450px;
   padding: 10%;
   margin: 20px;
-  display: inline-block;
+  display: block;
 }
 .boxSix {
-  background-image: url("red and silver.jpg");
+  background-image: url("sliver dress.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
-  height: 250px;
+  height: 450px;
   padding: 10%;
   margin: 20px;
-  display: inline-block;
+  display: block;
+}
+
+.boxSeven {
+  background-image: url("Ghana.jpg");
+  background-position: center; /* Center the image */
+  background-size: cover;
+  width: 400px;
+  line-height: 16px;
+  height: 450px;
+  padding: 10%;
+  margin: 20px;
+  display: block;
+}
+.boxEight {
+  background-image: url("inspiration.jpeg");
+  background-position: center; /* Center the image */
+  background-size: cover;
+  width: 400px;
+  line-height: 16px;
+  height: 450px;
+  padding: 10%;
+  margin: 20px;
+  display: block;
+}
+.boxNine {
+  background-image: url("Orange.jpg");
+  background-position: center; /* Center the image */
+  background-size: cover;
+  width: 400px;
+  line-height: 16px;
+  height: 450px;
+  padding: 10%;
+  margin: 20px;
+  display: block;
+}
+.boxTen {
+  background-image: url("Ankara.jpeg");
+  background-position: center; /* Center the image */
+  background-size: cover;
+  width: 400px;
+  line-height: 16px;
+  height: 450px;
+  padding: 10%;
+  margin: 20px;
+  display: block;
+}
+.boxEleven {
+  background-image: url("Fashion.jpeg");
+  background-position: center; /* Center the image */
+  background-size: cover;
+  width: 400px;
+  line-height: 16px;
+  height: 450px;
+  padding: 10%;
+  margin: 20px;
+  display: block;
+}
+.boxTwelve {
+  background-image: url("Pink.jpeg");
+  background-position: center; /* Center the image */
+  background-size: cover;
+  width: 400px;
+  line-height: 16px;
+  height: 450px;
+  padding: 10%;
+  margin: 20px;
+  display: block;
+}
+.style {
+  display: flex;
+}
+.stylish {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.foot {
+  border: 10px;
+  margin-top: 20px;
+  padding: 100px;
+  background-color: #e7bceb;
 }

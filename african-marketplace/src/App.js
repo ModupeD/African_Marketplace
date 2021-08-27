@@ -3,12 +3,14 @@ import "./App.css";
 import ReactDOM from "react-dom";
 import Form from "./components/form";
 import Home from "./components/Home";
+
 import {
   Switch,
   Route,
   Redirect,
   BrowserRouter as Router,
 } from "react-router-dom";
+import Profile from "./components/profile";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           </Route>
           <Route path="/home">
             <Home Home={Home} />
+          </Route>
+          <Route path="/profile">
+            <Profile profile={Profile} />
           </Route>
         </Switch>
       </Router>
