@@ -17,14 +17,14 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Form Form={Form} />
-          </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home Home={Home} />
           </Route>
           <Route path="/profile">
             <Profile profile={Profile} />
+          </Route>
+          <Route path="/">
+            <Form Form={Form} />
           </Route>
         </Switch>
       </Router>
