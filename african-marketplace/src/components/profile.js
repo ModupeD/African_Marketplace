@@ -18,7 +18,7 @@ function Profile() {
                 <a href="/profile">Profile</a>
               </button>
               <button>
-                <a href="/">Checkout</a>
+                <a href="/">Add Items</a>
               </button>
             </nav>
           </header>
