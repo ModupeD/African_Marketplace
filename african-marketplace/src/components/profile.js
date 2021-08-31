@@ -1,7 +1,7 @@
 //import React from "react";
 
 import pic from "./../components/Trad Wear.png";
-
+import "./profile.css";
 function Profile() {
   return (
     <div class="beginning">
@@ -37,29 +37,29 @@ function Profile() {
         <section>
           <div class="organize">
             <div class="container">
-              <div class="boxOne">
+              <div class="boxA">
                 <div class="overlay">
                   <button>$9.99</button>
                 </div>
               </div>
             </div>
-            <div class="boxTwo">
+            <div class="boxB">
               {" "}
               <h4>$9.99</h4>
             </div>
-            <div class="boxThree"> </div>
+            <div class="boxC"> </div>
           </div>
 
           <div class="reorganize">
-            <div class="boxFour">
+            <div class="boxD">
               {" "}
               <button>$9.99</button>
             </div>
-            <div class="boxFive">
+            <div class="boxE">
               {" "}
               <button>$9.99</button>
             </div>
-            <div class="boxSix">
+            <div class="boxF">
               {" "}
               <button>$9.99</button>
             </div>
@@ -73,16 +73,16 @@ function Profile() {
 
         <div class="style">
           <div class="stylish">
-            <div class="boxSeven"></div>
-            <div class="boxNine"></div>
+            <div class="boxG"></div>
+            <div class="boxH"></div>
           </div>
           <div class="stylish">
-            <div class="boxEleven"></div>
-            <div class="boxTwelve"></div>
+            <div class="boxI"></div>
+            <div class="boxJ"></div>
           </div>
           <div class="stylish">
-            <div class="boxEight"></div>
-            <div class="boxTen"></div>
+            <div class="boxK"></div>
+            <div class="boxL"></div>
           </div>
         </div>
 

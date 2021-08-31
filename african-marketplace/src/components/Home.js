@@ -38,33 +38,54 @@ function Home() {
           <div class="organize">
             <div class="container">
               <div class="boxOne">
-                <div class="overlay">
+                {" "}
+                <div class="middle">
+                  <button>$9.99</button>{" "}
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="boxTwo">
+                {" "}
+                <div class="middle">
                   <button>$9.99</button>
                 </div>
               </div>
             </div>
-            <div class="boxTwo">
-              {" "}
-              <h4>$9.99</h4>
-            </div>
-            <div class="boxThree">
-              {" "}
-              <button>$9.99</button>
+            <div class="container">
+              <div class="boxThree">
+                {" "}
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="reorganize">
-            <div class="boxFour">
-              {" "}
-              <button>$9.99</button>
+            <div class="container">
+              <div class="boxFour">
+                {" "}
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
             </div>
-            <div class="boxFive">
-              {" "}
-              <button>$9.99</button>
+            <div class="container">
+              <div class="boxFive">
+                {" "}
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
             </div>
-            <div class="boxSix">
-              {" "}
-              <button>$9.99</button>
+            <div class="container">
+              <div class="boxSix">
+                {" "}
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="headingstyle">
@@ -76,16 +97,53 @@ function Home() {
 
         <div class="style">
           <div class="stylish">
-            <div class="boxSeven"></div>
-            <div class="boxNine"></div>
+            <div class="container">
+              <div class="boxSeven">
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="boxNine">
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="stylish">
-            <div class="boxEleven"></div>
-            <div class="boxTwelve"></div>
+            <div class="container">
+              <div class="boxEleven">
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="boxTwelve">
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="stylish">
-            <div class="boxEight"></div>
-            <div class="boxTen"></div>
+            <div class="container">
+              <div class="boxEight">
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="boxTen">
+                <div class="middle">
+                  <button>$9.99</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
