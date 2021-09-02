@@ -202,6 +202,15 @@ header h2 {
   margin: 20px;
   display: block;
 }
+.thing {
+  display: flex;
+  background-color: pink;
+}
+
+.overlayPadding {
+  inset: 80px;
+}
+
 .boxOne h1 {
   color: white;
   font-size: 20px;

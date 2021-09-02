@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-modal";
 import "./Home.css";
 import pic from "./../components/Influencer.png";
-
+import picture from "./../components/Golden peach.jpg";
+import image from "./../components/african pattern.jpg";
+import peachgold from "./../components/peach gold.jpg";
 function Home() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
   return (
     <div class="beginning">
       <div class="source">
@@ -40,7 +45,33 @@ function Home() {
               <div class="boxOne">
                 {" "}
                 <div class="middle">
-                  <button>$9.99</button>{" "}
+                  <button onClick={() => setModalIsOpen(true)}> $30.99</button>{" "}
+                  <Modal
+                    isOpen={modalIsOpen}
+                    style={{
+                      content: {
+                        inset: 120,
+                      },
+                    }}
+                  >
+                    <div class="thing">
+                      <div class="pink">
+                        <button onClick={() => setModalIsOpen(false)}>
+                          Back
+                        </button>
+                        <h2>Description</h2>
+                        <p>
+                          Peach Gold bodycon dress
+                          <br />
+                        </p>
+                        <h4>Price: $30.99</h4>
+                      </div>
+
+                      <div>
+                        <img src={picture} />
+                      </div>
+                    </div>
+                  </Modal>
                 </div>
               </div>
             </div>
@@ -48,7 +79,13 @@ function Home() {
               <div class="boxTwo">
                 {" "}
                 <div class="middle">
-                  <button>$9.99</button>
+                  <button onClick={() => setModalIsOpen(true)}> $9.99</button>
+                  <Modal>
+                    {" "}
+                    <div>
+                      <img src={image} />
+                    </div>
+                  </Modal>
                 </div>
               </div>
             </div>
@@ -56,7 +93,7 @@ function Home() {
               <div class="boxThree">
                 {" "}
                 <div class="middle">
-                  <button>$9.99</button>
+                  <button> $24.99</button>{" "}
                 </div>
               </div>
             </div>
@@ -67,7 +104,7 @@ function Home() {
               <div class="boxFour">
                 {" "}
                 <div class="middle">
-                  <button>$9.99</button>
+                  <button onClick="Descriptions()">$9.99</button>
                 </div>
               </div>
             </div>
@@ -75,7 +112,7 @@ function Home() {
               <div class="boxFive">
                 {" "}
                 <div class="middle">
-                  <button>$9.99</button>
+                  <button onClick="Descriptions()">$9.99</button>
                 </div>
               </div>
             </div>
@@ -83,7 +120,7 @@ function Home() {
               <div class="boxSix">
                 {" "}
                 <div class="middle">
-                  <button>$9.99</button>
+                  <button onClick="Descriptions()">$9.99</button>
                 </div>
               </div>
             </div>
@@ -100,14 +137,14 @@ function Home() {
             <div class="container">
               <div class="boxSeven">
                 <div class="middle">
-                  <button>$9.99</button>
+                  <button onClick="Descriptions()">$9.99</button>
                 </div>
               </div>
             </div>
             <div class="container">
               <div class="boxNine">
                 <div class="middle">
-                  <button>$9.99</button>
+                  <button onClick="Descriptions()">$9.99</button>
                 </div>
               </div>
             </div>
