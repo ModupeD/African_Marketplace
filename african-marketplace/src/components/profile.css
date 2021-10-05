@@ -1,3 +1,65 @@
+.structure {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.restructure {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.structure button {
+  line-height: 16px;
+  top: 150%;
+  position: center;
+  background-color: #2b0053; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 14px 40px;
+}
+.restructure button {
+  line-height: 16px;
+  top: 150%;
+  position: center;
+  background-color: #2b0053;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 14px 40px;
+}
+.styles {
+  display: flex;
+}
+.stylishs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.stylishs button {
+  line-height: 16px;
+  top: 150%;
+  position: center;
+  background-color: #2b0053; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 14px 40px;
+}
 .boxA {
   background-image: url("south.jpeg");
   background-position: center; /* Center the image */

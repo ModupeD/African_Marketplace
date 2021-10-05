@@ -1,35 +1,45 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+import { Link } from "react-router-dom";
+import { MdPermIdentity } from "react-icons/md";
 import "./Home.css";
+import LoginForm from "./LoginForm";
 import pic from "./../components/Influencer.png";
 import picture from "./../components/Golden peach.jpg";
 import image from "./../components/african pattern.jpg";
 import peachgold from "./../components/peach gold.jpg";
-function Home() {
+function Women() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
     <div class="beginning">
       <div class="source">
+        <nav>
+          <button className="buticon">
+            <Link to="/LoginForm"> Log in</Link>{" "}
+          </button>
+          <button className="buticon"> Sign up </button>
+        </nav>
         <div class="headingstyle">
           <header>
             <title>Site Title</title>
             <h2>African Market </h2>
-            <nav>
-              <button>
-                <a href="/home">Home</a>
-              </button>
-              <button>
-                <a href="/profile">Profile</a>
-              </button>
-              <button>
-                <a href="/">Add Items</a>
-              </button>
-            </nav>
+            <div className="navbar">
+              <nav>
+                <button>
+                  <a href="/women">Women</a>
+                </button>
+                <button>
+                  <a href="/men">Men</a>
+                </button>
+                <button>
+                  <a href="/dashboard">Dashboard</a>
+                </button>
+              </nav>
+            </div>
           </header>
         </div>
       </div>
-
       <body>
         <div class="body-begin">
           <img src={pic} />
@@ -81,7 +91,6 @@ function Home() {
                 <div class="middle">
                   <button onClick={() => setModalIsOpen(true)}> $9.99</button>
                   <Modal>
-                    {" "}
                     <div>
                       <img src={image} />
                     </div>
@@ -201,4 +210,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Women;
