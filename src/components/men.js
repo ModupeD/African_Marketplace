@@ -1,6 +1,6 @@
 //import React from "react";
 
-import pic from "./../components/Trad Wear.png";
+import pic from "./../components/./../images/Trad Wear.png";
 import "./profile.css";
 function Men() {
   return (

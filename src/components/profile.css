@@ -61,7 +61,7 @@
   padding: 14px 40px;
 }
 .boxA {
-  background-image: url("south.jpeg");
+  background-image: url("./../images/south.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   display: block;
@@ -74,7 +74,7 @@
 }
 
 .boxB {
-  background-image: url("Taylor\ Bankz.jpeg");
+  background-image: url("./../images/Taylor\ Bankz.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -85,7 +85,7 @@
 }
 
 .boxC {
-  background-image: url("Blue.jpeg");
+  background-image: url("./../images/Blue.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -95,7 +95,7 @@
   display: block;
 }
 .boxD {
-  background-image: url("Agbada.jpeg");
+  background-image: url("./../images/Agbada.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -105,7 +105,7 @@
   display: block;
 }
 .boxE {
-  background-image: url("Brown.jpeg");
+  background-image: url("./../images/Brown.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -115,7 +115,7 @@
   display: block;
 }
 .boxF {
-  background-image: url("Burgundy.jpeg");
+  background-image: url("./../images/Burgundy.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -125,7 +125,7 @@
   display: block;
 }
 .boxG {
-  background-image: url("Black\ African.jpeg");
+  background-image: url("./../images/Black\ African.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -136,7 +136,7 @@
   display: block;
 }
 .boxH {
-  background-image: url("African.jpeg");
+  background-image: url("./../images/African.jpeg");
   background-position: top; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -147,7 +147,7 @@
   display: block;
 }
 .boxI {
-  background-image: url("traditional.jpeg");
+  background-image: url("./../images/traditional.jpeg");
   background-position: top; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -158,7 +158,7 @@
   display: block;
 }
 .boxJ {
-  background-image: url("Aso\ Oke.jpeg");
+  background-image: url("./../images/Aso\ Oke.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -169,7 +169,7 @@
   display: block;
 }
 .boxK {
-  background-image: url("south.jpeg");
+  background-image: url("./../images/south.jpeg");
   background-position: top; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -180,7 +180,7 @@
   display: block;
 }
 .boxL {
-  background-image: url("Asoebi\ Styles.jpeg");
+  background-image: url("./../images/Asoebi\ Styles.jpeg");
   background-position: top; /* Center the image */
   background-size: cover;
   width: 400px;

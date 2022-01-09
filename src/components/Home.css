@@ -216,11 +216,14 @@ header h2 {
   flex-wrap: nowrap;
   flex-direction: row;
 }
-.beginning {
-  margin: 50px;
+@media screen and (min-width: 480px) {
+  .beginning {
+    margin: 50px;
+  }
 }
+
 .boxOne {
-  background-image: url("Golden peach.jpg");
+  background-image: url("./../images/Golden\ peach.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   display: block;
@@ -339,7 +342,7 @@ header h2 {
 }
 
 .boxTwo {
-  background-image: url("african pattern.jpg");
+  background-image: url("./../images/african pattern.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -350,7 +353,7 @@ header h2 {
 }
 
 .boxThree {
-  background-image: url("peach gold.jpg");
+  background-image: url("./../images/peach gold.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -360,7 +363,7 @@ header h2 {
   display: block;
 }
 .boxFour {
-  background-image: url("red and silver.jpg");
+  background-image: url("./../images/red and silver.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -370,7 +373,7 @@ header h2 {
   display: block;
 }
 .boxFive {
-  background-image: url("Black dress.jpg");
+  background-image: url("./../images/Black dress.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -380,7 +383,7 @@ header h2 {
   display: block;
 }
 .boxSix {
-  background-image: url("sliver dress.jpg");
+  background-image: url("./../images/sliver dress.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -391,7 +394,7 @@ header h2 {
 }
 
 .boxSeven {
-  background-image: url("Ghana.jpg");
+  background-image: url("./../images/Ghana.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -402,7 +405,7 @@ header h2 {
   display: block;
 }
 .boxEight {
-  background-image: url("inspiration.jpeg");
+  background-image: url("./../images/inspiration.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -413,7 +416,7 @@ header h2 {
   display: block;
 }
 .boxNine {
-  background-image: url("Orange.jpg");
+  background-image: url("./../images/Orange.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -424,7 +427,7 @@ header h2 {
   display: block;
 }
 .boxTen {
-  background-image: url("Ankara.jpeg");
+  background-image: url("./../images/Ankara.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -435,7 +438,7 @@ header h2 {
   display: block;
 }
 .boxEleven {
-  background-image: url("Fashion.jpeg");
+  background-image: url("./../images/Fashion.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -446,7 +449,7 @@ header h2 {
   display: block;
 }
 .boxTwelve {
-  background-image: url("Pink.jpeg");
+  background-image: url("./../images/Pink.jpeg");
   background-position: center; /* Center the image */
   background-size: cover;
   width: 400px;
@@ -459,12 +462,35 @@ header h2 {
 .style {
   display: flex;
 }
+
 .stylish {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
+@media screen and (max-width: 480px) {
+  .organize {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .style {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .reorganize {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .stylish {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
 .stylish button {
   line-height: 16px;
   top: 150%;
