@@ -1,74 +1,135 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import "./LoginForm.css";
 
-function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({ name: "", email: "", password: "" });
-  const [user, setUser] = useState({ name: "", email: "", password: "" });
+// Sample user data - in a real app, this would come from a backend
+const VALID_USERS = [
+  {
+    username: "user1",
+    password: "password123",
+    name: "John Doe",
+    email: "john@example.com",
+    image: null
+  },
+  {
+    username: "user2",
+    password: "password456",
+    name: "Jane Smith",
+    email: "jane@example.com",
+    image: null
+  }
+];
 
-  const adminUser = {
-    email: "admin@admin.com",
-    password: "admin123",
+function LoginForm() {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: ""
+  });
+  const [error, setError] = useState("");
+  const history = useHistory();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+    setError(""); // Clear error when user types
   };
 
-  const login = () => {
-    console.log(details);
-    if (
-      details.email == adminUser.email &&
-      details.password == adminUser.password
-    ) {
-      console.log("Logged in");
-      setUser({
-        name: details.name,
-        email: details.email,
-      });
-    } else {
-      console.log("Details do not match");
-    }
-  };
-  const submitHandler = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    login();
-  };
+    
+    // Find user with matching credentials
+    const user = VALID_USERS.find(
+      u => u.username === formData.username && u.password === formData.password
+    );
 
-  const logout = () => {
-    console.log("Logout");
+    if (user) {
+      localStorage.setItem('currentUser', JSON.stringify({
+        name: user.name,
+        email: user.email,
+        image: user.image
+      }));
+      
+      history.push('/dashboard');
+    } else {
+      setError("Invalid username or password");
+    }
   };
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <div className="form-inner">
-          <h2>Login</h2>
-          <label htmlFor="name">Name: </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            onChange={(e) => setDetails({ ...details, name: e.target.value })}
-            value={details.name}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            onChange={(e) => setDetails({ ...details, email: e.target.value })}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            onChange={(e) =>
-              setDetails({ ...details, password: e.target.value })
-            }
-          />
-        </div>
-        <input type="submit" value="Login" />
-      </form>
+    <div className="login-container">
+      <main>
+        <form 
+          className="login-form" 
+          onSubmit={handleSubmit}
+          aria-labelledby="login-title"
+        >
+          <div className="login-icon" role="presentation">
+            <i className="fas fa-user-circle" aria-hidden="true"></i>
+          </div>
+          
+          <div className="form-inner">
+            <h1 id="login-title" className="form-title">
+              Sign In to Your Account
+            </h1>
+            
+            {error && (
+              <div 
+                className="error-message" 
+                role="alert"
+                aria-live="polite"
+              >
+                {error}
+              </div>
+            )}
+            
+            <div className="form-group">
+              <label htmlFor="username" className="form-label">
+                Username <span className="sr-only">(required)</span>
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                required
+                aria-required="true"
+                aria-invalid={error ? "true" : "false"}
+                aria-describedby={error ? "login-error" : undefined}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="password" className="form-label">
+                Password <span className="sr-only">(required)</span>
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+                aria-required="true"
+                aria-invalid={error ? "true" : "false"}
+                aria-describedby={error ? "login-error" : undefined}
+              />
+            </div>
+
+            <button 
+              type="submit" 
+              className="submit-button"
+              disabled={!formData.username || !formData.password}
+              aria-disabled={!formData.username || !formData.password}
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+      </main>
     </div>
   );
 }

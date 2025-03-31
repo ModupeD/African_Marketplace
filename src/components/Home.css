@@ -128,7 +128,6 @@ table {
   max-width: 100%;
   padding: 0;
   margin: 0;
-  border: 1px solid grey;
 }
 
 /*General  Styles*/
@@ -192,15 +191,24 @@ header h2 {
 .headingstyle {
   display: flex;
   justify-content: center;
-  border: 10px;
   background-color: #fdeaff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
 }
 .headingstyle h2 {
   text-align: center;
 }
-.organize {
-  display: flex;
-  flex-wrap: nowrap;
+.organize, .stylish {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 .reorganize {
   display: flex;
@@ -217,10 +225,13 @@ header h2 {
   flex-direction: row;
 }
 .beginning {
-  margin: 50px;
+  margin: 0;
+  padding: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 .boxOne {
-  background-image: url("Golden peach.jpg");
+  background-image: url("../assets/women/Golden peach.jpg");
   background-position: center; /* Center the image */
   background-size: cover;
   display: block;
@@ -280,44 +291,63 @@ header h2 {
 .container {
   position: relative;
   width: 100%;
+  height: 400px;
+  margin: 0;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.image {
-  opacity: 1;
-  display: block;
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8 {
+  position: relative;
   width: 100%;
-  height: auto;
-  transition: 0s ease;
-  backface-visibility: hidden;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  border: none;
 }
+
+.box1 { background-image: url("../assets/women/sliver%20dress.jpg"); }
+.box2 { background-image: url("../assets/women/red%20and%20silver.jpg"); }
+.box3 { background-image: url("../assets/women/peach%20gold.jpg"); }
+.box4 { background-image: url("../assets/women/Pink.jpeg"); }
+.box5 { background-image: url("../assets/women/Purple.jpg"); }
+.box6 { background-image: url("../assets/women/Orange.jpg"); }
+.box7 { background-image: url("../assets/women/Green%20dress.jpg"); }
+.box8 { background-image: url("../assets/women/Green.jpg"); }
 
 .middle {
-  transition: 0s ease;
-  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .image {
-  opacity: 0.3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
 .container:hover .middle {
   opacity: 1;
 }
 
-.container:hover .overlay {
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.container:hover::before {
   opacity: 1;
 }
-.container:hover .overlay {
-  bottom: 0;
-  height: 100%;
-}
-/*end of overlay styles*/
+
 .reorganize button {
   line-height: 16px;
   top: 150%;
@@ -333,16 +363,27 @@ header h2 {
   cursor: pointer;
   padding: 14px 40px;
 }
+.body-begin {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .body-begin img {
-  width: 1400px;
-  height: 800px;
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  object-fit: cover;
 }
 
 .boxTwo {
-  background-image: url("african pattern.jpg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/women/peach gold.jpg");
+  background-position: center;
   background-size: cover;
+  display: block;
   width: 400px;
+  line-height: 16px;
   height: 450px;
   padding: 10%;
   margin: 20px;
@@ -350,18 +391,20 @@ header h2 {
 }
 
 .boxThree {
-  background-image: url("peach gold.jpg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/women/sliver dress.jpg");
+  background-position: center;
   background-size: cover;
+  display: block;
   width: 400px;
+  line-height: 16px;
   height: 450px;
   padding: 10%;
   margin: 20px;
   display: block;
 }
 .boxFour {
-  background-image: url("red and silver.jpg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/women/red and silver.jpg");
+  background-position: center;
   background-size: cover;
   width: 400px;
   height: 450px;
@@ -370,8 +413,8 @@ header h2 {
   display: block;
 }
 .boxFive {
-  background-image: url("Black dress.jpg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/women/Black dress.jpg");
+  background-position: center;
   background-size: cover;
   width: 400px;
   height: 450px;
@@ -380,8 +423,8 @@ header h2 {
   display: block;
 }
 .boxSix {
-  background-image: url("sliver dress.jpg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/women/sliver dress.jpg");
+  background-position: center;
   background-size: cover;
   width: 400px;
   height: 450px;
@@ -390,31 +433,9 @@ header h2 {
   display: block;
 }
 
-.boxSeven {
-  background-image: url("Ghana.jpg");
-  background-position: center; /* Center the image */
-  background-size: cover;
-  width: 400px;
-  line-height: 16px;
-  height: 450px;
-  padding: 10%;
-  margin: 20px;
-  display: block;
-}
-.boxEight {
-  background-image: url("inspiration.jpeg");
-  background-position: center; /* Center the image */
-  background-size: cover;
-  width: 400px;
-  line-height: 16px;
-  height: 450px;
-  padding: 10%;
-  margin: 20px;
-  display: block;
-}
 .boxNine {
-  background-image: url("Orange.jpg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/women/Orange.jpg");
+  background-position: center;
   background-size: cover;
   width: 400px;
   line-height: 16px;
@@ -424,8 +445,8 @@ header h2 {
   display: block;
 }
 .boxTen {
-  background-image: url("Ankara.jpeg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/men/African.jpeg");
+  background-position: center;
   background-size: cover;
   width: 400px;
   line-height: 16px;
@@ -435,8 +456,8 @@ header h2 {
   display: block;
 }
 .boxEleven {
-  background-image: url("Fashion.jpeg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/Fashion.jpeg");
+  background-position: center;
   background-size: cover;
   width: 400px;
   line-height: 16px;
@@ -446,8 +467,8 @@ header h2 {
   display: block;
 }
 .boxTwelve {
-  background-image: url("Pink.jpeg");
-  background-position: center; /* Center the image */
+  background-image: url("../assets/women/Pink.jpeg");
+  background-position: center;
   background-size: cover;
   width: 400px;
   line-height: 16px;
@@ -458,13 +479,8 @@ header h2 {
 }
 .style {
   display: flex;
+  margin-bottom: 20px;
 }
-.stylish {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
 .stylish button {
   line-height: 16px;
   top: 150%;
@@ -481,13 +497,144 @@ header h2 {
   padding: 14px 40px;
 }
 .foot {
-  border: 10px;
   margin-top: 20px;
-  padding: 100px;
+  padding: 40px;
   background-color: #e7bceb;
+  border-radius: 8px;
+  max-width: 1800px;
+  margin: 20px auto;
 }
 
 .buticon {
   padding: 8px;
   font-size: small;
+}
+
+@media (max-width: 1400px) {
+  .beginning {
+    padding: 15px;
+  }
+  
+  .container {
+    height: 350px;
+  }
+  
+  h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .organize, .stylish {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .container {
+    height: 300px;
+  }
+  
+  .product-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .organize, .stylish {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .container {
+    height: 250px;
+  }
+  
+  h2 {
+    font-size: 32px;
+  }
+  
+  .foot {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .organize, .stylish {
+    grid-template-columns: 1fr;
+  }
+  
+  .container {
+    height: 300px;
+  }
+  
+  .beginning {
+    padding: 10px;
+  }
+  
+  .headingstyle {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .style {
+    margin-bottom: 15px;
+  }
+  
+  .foot {
+    padding: 20px;
+    margin: 15px auto;
+  }
+  
+  .product-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  nav {
+    padding-right: 10px;
+  }
+  
+  .navbar a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Modal styles */
+.product-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.product-modal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .product-modal {
+    padding: 15px;
+    gap: 1rem;
+  }
+  
+  .product-modal h2 {
+    font-size: 24px;
+  }
+  
+  .product-modal p {
+    font-size: 14px;
+  }
+  
+  .product-modal h4 {
+    font-size: 18px;
+  }
 }

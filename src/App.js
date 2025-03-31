@@ -1,41 +1,42 @@
 import "./App.css";
-import ReactDOM from "react-dom";
 import Form from "./components/form";
 import Women from "./components/Women";
-import Login from "./components/LoginForm";
 import {
   Switch,
   Route,
-  Redirect,
   BrowserRouter as Router,
 } from "react-router-dom";
 import Men from "./components/men";
 import Dashboard from "./components/dashboard";
 import LoginForm from "./components/LoginForm";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Switch>
-          <Route exact path="/women">
-            <Women Women={Women} />
+          <Route path="/women">
+            <Women />
+          </Route>
+          <Route path="/men">
+            <Men />
           </Route>
           <Route path="/login">
             <LoginForm />
           </Route>
 
           <Route path="/dashboard">
-            <Dashboard dashboard={Dashboard} />
+            <Dashboard />
           </Route>
 
-          <Route path="/men">
-            <Men men={Men} />
-          </Route>
           <Route path="/">
-            <Form Form={Form} />
+            <Form />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

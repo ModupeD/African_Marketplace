@@ -1,43 +1,63 @@
 import React from "react";
 import "./Home.css";
+import Footer from "./Footer";
 
 function Home() {
   return (
-    <div>
-      <div className="source">
-        <div className="headingstyle">
-          <header>
-            <title>Site Title</title>
-            <h2>African Market </h2>
-            <nav>
-              <button>
-                <a href="/home">Home</a>
-              </button>
-              <button>
-                <a href="profile">Profile</a>
-              </button>
-              <button>
-                <a href="/">Add Items</a>
-              </button>
-            </nav>
-          </header>
+    <div className="beginning">
+      <main>
+        <div className="body-begin">
+          <img 
+            src={require("../assets/Influencer.png")} 
+            alt="Ghana traditional fashion showcase" 
+            loading="lazy"
+          />
         </div>
-      </div>
-      <body>
+
+        <div className="headingstyle">
+          <h2>Welcome to African Marketplace</h2>
+        </div>
+
         <section>
           <div className="organize">
-            <div className="boxOne"></div>
-            <div className="boxTwo"></div>
-            <div className="boxThree"></div>
-          </div>
-
-          <div className="reorganize">
-            <div className="boxFour"></div>
-            <div className="boxFive"></div>
-            <div className="boxSix"></div>
+            <div className="boxOne">
+              <h1>Traditional African Fashion</h1>
+            </div>
+            <div className="boxTwo">
+              <h1>Modern African Design</h1>
+            </div>
+            <div className="boxThree">
+              <h1>Cultural Heritage</h1>
+            </div>
+            <div className="boxFour">
+              <h1>Contemporary Style</h1>
+            </div>
           </div>
         </section>
-      </body>
+
+        <div className="headingstyle">
+          <h2>Featured Collections</h2>
+        </div>
+
+        <section>
+          <div className="organize">
+            <div className="boxFive">
+              <h1>Women's Collection</h1>
+            </div>
+            <div className="boxSix">
+              <h1>Men's Collection</h1>
+            </div>
+            <div className="boxNine">
+              <h1>Accessories</h1>
+            </div>
+            <div className="boxTen">
+              <h1>Traditional Wear</h1>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+      </main>
     </div>
   );
 }
