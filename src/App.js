@@ -2,7 +2,7 @@ import "./App.css";
 import Form from "./components/form";
 import Women from "./components/Women";
 import {
-  Switch,
+  Routes,
   Route,
   BrowserRouter as Router,
 } from "react-router-dom";
@@ -17,25 +17,13 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Switch>
-          <Route path="/women">
-            <Women />
-          </Route>
-          <Route path="/men">
-            <Men />
-          </Route>
-          <Route path="/login">
-            <LoginForm />
-          </Route>
-
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
-
-          <Route path="/">
-            <Form />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/women" element={<Women />} />
+          <Route path="/men" element={<Men />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Form />} />
+        </Routes>
         <Footer />
       </Router>
     </div>

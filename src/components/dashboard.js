@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './dashboard.css';
 
 function Dashboard() {
   const [user, setUser] = useState(null);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Get user data from localStorage
@@ -13,13 +13,13 @@ function Dashboard() {
       setUser(JSON.parse(userData));
     } else {
       // Redirect to login if no user data found
-      history.push('/login');
+      navigate('/login');
     }
-  }, [history]);
+  }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem('currentUser');
-    history.push('/login');
+    navigate('/login');
   };
 
   if (!user) {

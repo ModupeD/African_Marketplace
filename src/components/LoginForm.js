@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
 // Sample user data - in a real app, this would come from a backend
@@ -26,7 +26,7 @@ function LoginForm() {
     password: ""
   });
   const [error, setError] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,7 +52,7 @@ function LoginForm() {
         image: user.image
       }));
       
-      history.push('/dashboard');
+      navigate('/dashboard');
     } else {
       setError("Invalid username or password");
     }

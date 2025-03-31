@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import LoginForm from "./LoginForm";
 export default function Form() {
   const [user, setUser] = useState({ name: "", email: "", password: "" });
   const [error, setError] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ export default function Form() {
       return;
     }
     // Add form submission logic here
-    history.push('/dashboard');
+    navigate('/dashboard');
   };
 
   const handleChange = (e) => {
