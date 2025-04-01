@@ -97,20 +97,19 @@ function Men() {
 
   const ProductCard = ({ product }) => (
     <div className="container">
-      <div 
-        className="product-image" 
-        style={{ backgroundImage: `url(${product.image})` }}
-      >
-        <div className="middle">
-          <button 
-            onClick={() => handleProductClick(product)}
-            className="product-button"
-            aria-label={`View details for ${product.name}`}
-          >
-            ${product.price}
-          </button>
-        </div>
-      </div>
+       <img 
+    src={product.image} 
+    alt={product.name}
+    className="product-image-direct"
+  />
+  <div className="middle">
+    <button 
+      onClick={() => handleProductClick(product)}
+      className="product-button"
+    >
+      ${product.price}
+    </button>
+  </div>
     </div>
   );
 
